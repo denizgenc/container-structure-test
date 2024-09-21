@@ -90,7 +90,7 @@ func (mt MetadataTest) Run(driver drivers.Driver) *types.TestResult {
 		Name: mt.LogName(),
 		Pass: true,
 	}
-	logrus.Debug(mt.LogName())
+	logrus.Info(mt.LogName())
 	imageConfig, err := driver.GetConfig()
 	if err != nil {
 		result.Errorf("Error retrieving image config: %s", err.Error())

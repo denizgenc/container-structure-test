@@ -63,7 +63,7 @@ func (lt LicenseTest) Run(driver drivers.Driver) *types.TestResult {
 		Pass:   true,
 		Errors: make([]string, 0),
 	}
-	logrus.Debug(lt.LogName())
+	logrus.Info(lt.LogName())
 	if lt.Debian {
 		root := utils.DebianRoot
 		packages, err := driver.ReadDir(root)

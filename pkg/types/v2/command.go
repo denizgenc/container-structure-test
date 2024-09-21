@@ -81,7 +81,7 @@ func (ct *CommandTest) LogName() string {
 }
 
 func (ct *CommandTest) Run(driver drivers.Driver) *types.TestResult {
-	logrus.Debug(ct.LogName())
+	logrus.Info(ct.LogName())
 	config, err := driver.GetConfig()
 	if err != nil {
 		logrus.Errorf("error retrieving image config: %s", err.Error())
